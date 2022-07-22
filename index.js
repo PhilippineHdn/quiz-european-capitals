@@ -29,30 +29,22 @@ const answer9 = document.querySelector("#answer9");
 const results = document.getElementById('results');
 const mark = document.getElementById('mark');
 let count = 0;
-let answer = [false, false, false, false, false, false, false, false, false];
+let isAnswerClicked = [false, false, false, false, false, false, false, false, false];
 
-// let tab = ["banane", "tomate", 1, true]
-// console.log(tab);
-// console.log(tab[2])
-// tab[1] = 'oignons'
-// console.log(tab)
-// tab.push('lettuce')
-// console.log(tab)
+// function add (number1, number2) {
+//     const result = number1 + number2;
+//     return result;
+// }
 
-function add (number1, number2) {
-    const result = number1 + number2;
-    return result;
-}
+// let result1 = add(5, 3);
+// console.log(result1);
 
-let result1 = add(5, 3);
-console.log(result1);
+// function presentation (age, name) {
+//     return `Bonjour ${name}, tu as ${age} ans`;
+// }
 
-function presentation (age, name) {
-    return `Bonjour ${name}, tu as ${age} ans`;
-}
-
-let test = presentation(27, 'Hugo');
-console.log(test); 
+// let test = presentation(27, 'Hugo');
+// console.log(test); 
 
 function incrementation () {
     // count++
@@ -60,177 +52,181 @@ function incrementation () {
     // count = count +1
 }
 
+function changeOnClickedAnswer (index) {
+    isAnswerClicked[index] = true;
+}
+
 btn1.addEventListener("click", () => {
     
-    if (answer[0] === false) {
+    if (isAnswerClicked[0] === false) {
         incrementation(); 
         btn1.classList.add('rightanswer');
         answer1.classList.add('show-answer');
         answer1.style.background = "green";
     }
-    answer[0] = true; 
+    changeOnClickedAnswer(0);
 });
 
 
 btn2.addEventListener("click", () => { 
-    if (answer[0] === false) {
+    if (isAnswerClicked[0] === false) {
         btn2.classList.add('wronganswer');
         answer1.classList.add('show-answer');
         answer1.style.background = "red";
     }
-    answer[0] = true;
+    changeOnClickedAnswer(0);
 });
 
 btn3.addEventListener("click", () => {
-    if (answer[1] === false) {
+    if (isAnswerClicked[1] === false) {
     btn3.classList.add('wronganswer');
     answer2.classList.add('show-answer');
     answer2.style.background = "red";
     }
-    answer[1] = true; 
+    changeOnClickedAnswer(1); 
 });
 
 btn4.addEventListener("click", () => {
-    if (answer[1] === false) {
+    if (isAnswerClicked[1] === false) {
         incrementation(); 
         btn4.classList.add('rightanswer');
         answer2.classList.add('show-answer');
         answer2.style.background = "green";
     }
-    answer[1] = true; 
+    changeOnClickedAnswer(1);
 });
 
 btn5.addEventListener("click", () => {
-    if (answer[2] === false) {
+    if (isAnswerClicked[2] === false) {
         incrementation(); 
         btn5.classList.add('rightanswer');
         answer3.classList.add('show-answer');
         answer3.style.background = "green";
     }
-    answer[2] = true; 
+    changeOnClickedAnswer(2); 
 });
 
 btn6.addEventListener("click", () => {
-    if (answer[2] === false) {
+    if (isAnswerClicked[2] === false) {
     btn6.classList.add('wronganswer');
     answer3.classList.add('show-answer');
     answer3.style.background = "red";
     }
-    answer[2] = true;
+    changeOnClickedAnswer(2);
 });
 
 btn7.addEventListener("click", () => {
-    if (answer[3] === false) {
+    if (isAnswerClicked[3] === false) {
     btn7.classList.add('wronganswer');
     answer4.classList.add('show-answer');
     answer4.style.background = "red";
     }
-    answer[3] = true;
+    changeOnClickedAnswer(3);
 });
 
 btn8.addEventListener("click", () => {
-    if (answer[3] === false) {
+    if (isAnswerClicked[3] === false) {
         incrementation(); 
         btn8.classList.add('rightanswer');
         answer4.classList.add('show-answer');
         answer4.style.background = "green";
     }
-    answer[3] = true; 
+    changeOnClickedAnswer(3); 
 });
 
 btn9.addEventListener("click", () => {
-    if (answer[4] === false) {
+    if (isAnswerClicked[4] === false) {
         incrementation(); 
         btn9.classList.add('rightanswer');
         answer5.classList.add('show-answer');
         answer5.style.background = "green";
     }
-    answer[4] = true; 
+    changeOnClickedAnswer(4);
 });
 
 btn10.addEventListener("click", () => {
-    if (answer[4] === false) {
+    if (isAnswerClicked[4] === false) {
     btn10.classList.add('wronganswer');
     answer5.classList.add('show-answer');
     answer5.style.background = "red";
     }
-    answer[4] = true;
+    changeOnClickedAnswer(4);
 });
 
 btn11.addEventListener("click", () => {
-    if (answer[5] === false) {
+    if (isAnswerClicked[5] === false) {
         incrementation(); 
         btn11.classList.add('rightanswer');
         answer6.classList.add('show-answer');
         answer6.style.background = "green";
     }
-    answer[5] = true; 
+    changeOnClickedAnswer(5); 
 });
 
 btn12.addEventListener("click", () => {
-    if (answer[5] === false) {
+    if (isAnswerClicked[5] === false) {
     btn12.classList.add('wronganswer');
     answer6.classList.add('show-answer');
     answer6.style.background = "red";
     }
-    answer[5] = true;
+    changeOnClickedAnswer(5);
 });
 
 btn13.addEventListener("click", () => {
-    if (answer[6] === false) {
+    if (isAnswerClicked[6] === false) {
         incrementation(); 
         btn13.classList.add('rightanswer');
         answer7.classList.add('show-answer');
         answer7.style.background = "green";
     }
-    answer[6] = true; 
+    changeOnClickedAnswer(6); 
 });
 
 btn14.addEventListener("click", () => {
-    if (answer[6] === false) {
+    if (isAnswerClicked[6] === false) {
     btn14.classList.add('wronganswer');
     answer7.classList.add('show-answer');
     answer7.style.background = "red";
     }
-    answer[6] = true;
+    changeOnClickedAnswer(6);
 });
 
 btn15.addEventListener("click", () => {
-    if (answer[7] === false) {
+    if (isAnswerClicked[7] === false) {
         incrementation(); 
         btn15.classList.add('rightanswer');
         answer8.classList.add('show-answer');
         answer8.style.background = "green";
     }
-    answer[7] = true; 
+    changeOnClickedAnswer(7); 
 });
 
 btn16.addEventListener("click", () => {
-    if (answer[7] === false) {
+    if (isAnswerClicked[7] === false) {
     btn16.classList.add('wronganswer');
     answer8.classList.add('show-answer');
     answer8.style.background = "red";
     }
-    answer[7] = true;
+    changeOnClickedAnswer(7);
 });
 
 btn17.addEventListener("click", () => {
-    if (answer[8] === false) {
+    if (isAnswerClicked[8] === false) {
     btn17.classList.add('wronganswer');
     answer9.classList.add('show-answer');
     answer9.style.background = "red";
     }
-    answer[8] = true;
+    changeOnClickedAnswer(8);
 });
 
 btn18.addEventListener("click", () => {
-    if (answer[8] === false) {
+    if (isAnswerClicked[8] === false) {
         incrementation(); 
         btn18.classList.add('rightanswer');
         answer9.classList.add('show-answer');
         answer9.style.background = "green";
     }
-    answer[8] = true; 
+    changeOnClickedAnswer(8);
 });
 
 results.addEventListener("click", () => {
