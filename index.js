@@ -44,18 +44,17 @@ function add (number1, number2) {
     return result;
 }
 
-let titi = add(5, 3);
-console.log(titi);
+let result1 = add(5, 3);
+console.log(result1);
 
 function presentation (age, name) {
     return `Bonjour ${name}, tu as ${age} ans`;
 }
 
-let kiki = presentation(27, 'Hugo');
-console.log(kiki); 
+let test = presentation(27, 'Hugo');
+console.log(test); 
 
-function 
-incrementation () {
+function incrementation () {
     // count++
     count += 1;
     // count = count +1
